@@ -1,3 +1,12 @@
+<!--Bloco de Restrição de acesso para proteção das páginas-->
+<?php
+  session_start();
+  //verifica se houve autenticação na tentativa de acesso e redireciona à página Index
+  if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM'){
+    header('Location: index.php?login=erro2');
+  }
+?>
+<!--fim bloco-->
 <html>
   <head>
     <meta charset="utf-8" />
