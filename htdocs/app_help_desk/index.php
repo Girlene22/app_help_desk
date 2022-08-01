@@ -40,20 +40,21 @@
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
 
-                  <?php if(isset($_GET['login']) && $_GET['login'] == 'erro'){?>
+                <?php if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
 
                   <div class="text-danger">
-                    Usuário ou senha inválido!
+                    Usuário ou senha inválido(s)
                   </div>
 
-                  <?php } ?>
-                  <?php if(isset($_GET['login']) && $_GET['login'] == 'erro2'){?>
+                <?php } ?>
+
+                <?php if(isset($_GET['login']) && $_GET['login'] == 'erro2') { ?>
 
                   <div class="text-danger">
-                    Faça login para acessar essa página
+                    Faça login antes de acessar as páginas protegidas
                   </div>
-
-                  <?php } ?>
+                  
+                <?php } ?>
 
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
